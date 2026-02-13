@@ -1,5 +1,5 @@
 -- Please note that the data used is from 2021, taken from https://ourworldindata.org/covid-deaths. There may be some differences from the most recent data available on that site.
-
+-- In this query file, I will only select a few things that can answer exploratory data questions and will only be limited to that.
 -- For the same data used in this project, it will be uploaded to this project's repository. Under the names "CovidDeaths" & "CovidVaccinations"
 
 -- check database connection
@@ -134,3 +134,4 @@ WHERE d.continent IS NOT NULL
 GROUP BY d.continent
 
 ORDER BY max_people_vaccinated_pct DESC;
+
