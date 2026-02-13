@@ -1,6 +1,6 @@
 -- Please note that the data used is from 2021, taken from https://ourworldindata.org/covid-deaths. There may be some differences from the most recent data available on that site.
 
--- For the exact same data used in this project, it will be uploaded to this project's repository.
+-- For the same data used in this project, it will be uploaded to this project's repository. Under the names "CovidDeaths" & "CovidVaccinations"
 
 -- check database connection
 Select *
@@ -16,7 +16,7 @@ from ProjectPorto.dbo.CovidVaccination
 
 -- 1. True Pandemic Burden (Beyond Case Counts)
 -- Which countries had the highest death rate per population? >> Identifies fragile health systems
--- How did fatality rate change over time? >> Reveals improvement / collapse of care
+-- How did the fatality rate change over time? >> Reveals improvement/collapse of care
 -- Which regions were hit hardest in the first wave? >> Guides future early-response focus
 
 SELECT 
@@ -132,4 +132,5 @@ JOIN ProjectPorto..CovidDeaths d
  AND v.date = d.date
 WHERE d.continent IS NOT NULL
 GROUP BY d.continent
+
 ORDER BY max_people_vaccinated_pct DESC;
